@@ -477,6 +477,8 @@ class Parser:
                     "a", attrs={"href": table_row_href, "style": "cursor: pointer; color: inherit; text-decoration: none; fill: inherit;"}
                 )
                 # row_target_span.wrap(row_link_wrapper)
+            for svg in table_view.findAll("svg"):
+                svg.extract()
 
         # embed custom google font(s)
         fonts_selectors = {
